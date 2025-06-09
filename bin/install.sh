@@ -20,6 +20,7 @@ link_to_homedir() {
   if [[ "$HOME" != "$dotdir" ]];then
     for f in $dotdir/.??*; do
       [[ `basename $f` == ".git" ]] && continue
+      [[ `basename $f` == ".emacs.d" ]] && continue
       if [[ -L "$HOME/`basename $f`" ]];then
         command rm -f "$HOME/`basename $f`"
       fi
@@ -28,6 +29,14 @@ link_to_homedir() {
       fi
       command ln -snf $f $HOME
     done
+    #...Emacs prelude personal directory
+    EMACSDIR=".emacs.d/personal"
+    if [[ -L "$HOME/$EMACSDIR" ]]; then
+        command rm -rf "$HOME/EMACSDIR"
+    fi
+    if [[ -e "$HOME/$EMACSDIR" ]]; then
+        command mv "$HOME/$EMACSDIR" "$HOME/dot.backup/"
+    fi
   else
     command echo "same install src dest"
   fi
