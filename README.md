@@ -12,7 +12,7 @@ RK's personal dotfiles.
 
 Download the dotfiles project directory.
 ```shell
-git clone git@github.com:ryokbys/dotfiles.git dotfiles
+git clone https://github.com/ryokbys/dotfiles.git dotfiles
 ```
 
 Install the dotfiles using `bin/install.sh`
