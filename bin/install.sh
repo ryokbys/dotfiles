@@ -37,6 +37,7 @@ link_to_homedir() {
     if [[ -e "$HOME/$EMACSDIR" ]]; then
         command mv "$HOME/$EMACSDIR" "$HOME/dot.backup/"
     fi
+    command ln -snf $dotdir/$EMACSDIR $HOME/.emacs.d/
   else
     command echo "same install src dest"
   fi
