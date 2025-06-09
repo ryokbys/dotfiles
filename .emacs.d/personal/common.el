@@ -56,6 +56,7 @@
       ;; ("\\.java$" . jde-mode)
       ("\\.tex$" . yatex-mode)
       ("\\.sty$" . yatex-mode)
+      ("\\.sh$" . shell-script-mode)
       ("\\.ltx$" . yatex-mode)
       ("\\.java$" . java-mode)
       ("makefile" . makefile-mode)

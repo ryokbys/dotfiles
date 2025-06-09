@@ -1,4 +1,6 @@
 # !/usr/bin/env bash
+# Modified from the original: https://qiita.com/yutkat/items/c6c7584d9795799ee164
+
 set -ue
 
 helpmsg() {

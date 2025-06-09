@@ -10,7 +10,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="gnzh"
-ZSH_THEME="josh"
+#ZSH_THEME="josh"
+ZSH_THEME="Soliah"
 
 
 # Set list of themes to pick from when loading at random
