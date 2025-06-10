@@ -1,5 +1,6 @@
 # dotfiles
 RK's personal dotfiles.
+Therefore it is not recommended to use this as is.
 
 ## Prerequisite
 
@@ -20,4 +21,4 @@ Install the dotfiles using _GNU stow_.
 cd dotfiles
 stow -v zsh emacs tmux gnuplot git
 ```
-This will create symlinks in the home directory.
+This will create symlinks in your home directory.
