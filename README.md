@@ -10,13 +10,13 @@ RK's personal dotfiles.
 
 ## Install
 
-Download the dotfiles project directory.
+Download the dotfiles onto the home directory.
 ```shell
-git clone https://github.com/ryokbys/dotfiles.git dotfiles
+git clone https://github.com/ryokbys/dotfiles.git ~/dotfiles
 ```
 
-Install the dotfiles using `bin/install.sh`
+Install the dotfiles using _GNU stow_.
 ```shell
 cd dotfiles
-./bin/install.sh
+stow -v zsh emacs tmux gnuplot git
 ```
