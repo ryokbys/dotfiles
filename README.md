@@ -16,9 +16,8 @@ Download the dotfiles onto your **home directory** (otherwise the following stow
 git clone https://github.com/ryokbys/dotfiles.git ~/dotfiles
 ```
 
-Install the dotfiles using _GNU stow_.
+To install the dotfiles using _GNU stow_, run the following command at the dotfiles directory.
 ```shell
-cd dotfiles
 stow -v zsh emacs tmux gnuplot git
 ```
 This will create symlinks in your home directory.
