@@ -27,6 +27,8 @@
 (global-set-key (kbd "C-z") 'undo) ; Emacs default is bound to hide Emacs.
 (define-key global-map [?¥] [?\\])  ;; ¥の代わりにバックスラッシュを入力する
 
+(global-set-key [remap other-window] 'other-window)
+
 ;; window move (shift + cursor)
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
@@ -77,9 +79,6 @@
 ;;=== don't use tab globally
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
-
-;;=== global outline-minor-mode-prefix setting ========================
-(setq outline-minor-mode-prefix "\C-c\C-o")
 
 ;; Disable automatic formatting on save
 (setq prelude-format-on-save nil)
