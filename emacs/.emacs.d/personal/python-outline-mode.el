@@ -39,3 +39,6 @@
    (+ 8 (- (match-end 0) (match-beginning 0)))))
 
 (add-hook 'python-mode-hook 'python-mode-outline-hook)
+(add-hook 'python-mode-hook
+          '(lambda()
+             (outline-minor-mode t)))

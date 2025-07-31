@@ -3,8 +3,10 @@
 ;;                    Last-modified: <2024-02-05 09:08:53 KOBAYASHI Ryo>
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(prelude-require-package 'yatex)
 
 (use-package yatex
+  :ensure t
   :config
   (setq ;;tex-command "LC_ALL='en_US.UTF-8' lualatex -synctex=1 -interaction=nonstopmode"
         ;;tex-command "pdflatex -interaction=nonstopmode"
@@ -22,7 +24,7 @@
         bibtex-command "upbibtex"
         )
   ;;..... to avoid error about last-command-char
-  (define-obsolete-variable-alias 'last-command-char 'last-command-event "at least 19.34") 
+  (define-obsolete-variable-alias 'last-command-char 'last-command-event "at least 19.34")
   ;; returning
   (add-hook 'yatex-mode-hook '(lambda ()
                                 (setq auto-fill-function nil)

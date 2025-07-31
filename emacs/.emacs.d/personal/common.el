@@ -82,3 +82,6 @@
 
 ;; Disable automatic formatting on save
 (setq prelude-format-on-save nil)
+
+;; YaTeX
+;;(load "my-yatex")
