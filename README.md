@@ -6,6 +6,8 @@ Therefore it is not recommended to use this as is.
 
 - zsh
   - oh-my-zsh
+  - fzf
+  - anyenv
 - emacs
   - prelude
 

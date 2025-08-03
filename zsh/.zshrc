@@ -11,7 +11,8 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="gnzh"
 #ZSH_THEME="josh"
-ZSH_THEME="Soliah"
+#ZSH_THEME="Soliah"
+ZSH_THEME="ys"
 
 
 # Set list of themes to pick from when loading at random
@@ -111,7 +112,7 @@ export PATH=$HOME/bin:$HOME/local/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source .zsh/alias.zsh
+source $HOME/.zsh/alias.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -119,3 +120,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # enable regexp
 setopt extended_glob
+
+# anyenv
+eval "$(anyenv init -)"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)

@@ -44,6 +44,10 @@
    '(lambda ()
       (set-face-foreground YaTeX-font-lock-formula-face "ForestGreen") ;; 数式の色
       ))
+  ;; key bindings
+  (add-hook 'yatex-mode-hook
+            '(lambda ()
+               (define-key YaTeX-mode-map (kbd "C-c c") 'YaTeX-typeset-menu)))
   ;; outline-minor-mode
   (add-hook
    'yatex-mode-hook

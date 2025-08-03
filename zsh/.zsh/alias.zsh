@@ -1,4 +1,3 @@
-
 function set_projdir() {
     d=$(pwd)
     current=${HOME}/work/current
@@ -14,6 +13,15 @@ function mycd() {
     cd $@
     set_projdir
 }
+
+# fcd - cd to selected directory using fzf
+fcd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
 
 #-----aliases
 alias ..='cd ..'
@@ -48,8 +56,8 @@ alias veryclean='make veryclean'
 alias run='make run'
 alias sed='gsed'
 alias findnb='find . -name "*ipynb_check*" -prune -o -name "*.ipynb" | grep -v "_checkpoints"'
-alias gcc='gcc-14'
-alias g++='g++-14'
-alias c++='g++-14'
+alias gcc='gcc-15'
+alias g++='g++-15'
+alias c++='g++-15'
 #alias python='python3'
 #alias pip='pip3'
