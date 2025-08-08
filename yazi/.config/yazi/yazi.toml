@@ -1,0 +1,15 @@
+## modify manager sction.
+
+ [mgr]
+  ## Set the value to 0 to hide the corresponding panel, 
+  ## but at least one panel must be visible (non-zero).
+  
+  #ratio          = [ 0, 1, 1 ]   ## 2 cols
+  ratio          = [ 1, 3, 3 ]  ## default 3 cols.
+
+  ## show hidden files
+  show_hidden    = false
+
+  font = "FiraCode Nerd Font Mono"
+  
+

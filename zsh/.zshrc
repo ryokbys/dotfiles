@@ -12,7 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="gnzh"
 #ZSH_THEME="josh"
 #ZSH_THEME="Soliah"
-ZSH_THEME="ys"
+ZSH_THEME="amuse"
 
 
 # Set list of themes to pick from when loading at random
