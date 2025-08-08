@@ -99,7 +99,7 @@ export LC_ALL=en_US.UTF-8
 # fi
 
 #...Add local path to the head of PATH
-export PATH=$HOME/bin:$HOME/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/local/bin:$HOME/.anyenv/bin:$PATH
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
