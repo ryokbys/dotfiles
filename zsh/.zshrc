@@ -124,5 +124,6 @@ setopt extended_glob
 # anyenv
 eval "$(anyenv init -)"
 
-# Set up fzf key bindings and fuzzy completion
+# Set up fzf key bindings and fuzzy completion. Choose one of two ways below.
 source <(fzf --zsh)
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
