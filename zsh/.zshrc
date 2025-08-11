@@ -97,6 +97,7 @@ export LC_ALL=en_US.UTF-8
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='emacsclient -nw -a ""'
 
 #...Add local path to the head of PATH
 export PATH=$HOME/bin:$HOME/local/bin:$HOME/.anyenv/bin:$PATH
