@@ -8,7 +8,7 @@
   ratio          = [ 1, 3, 3 ]  ## default 3 cols.
 
   ## show hidden files
-  show_hidden    = false
+  show_hidden    = true
 
   font = "FiraCode Nerd Font Mono"
   
