@@ -3,10 +3,15 @@
 ;;                    Last-modified: <2024-02-05 09:08:53 KOBAYASHI Ryo>
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(prelude-require-package 'yatex)
+;;(prelude-require-package 'yatex)
 
 (use-package yatex
   :ensure t
+  :defer t
+  :mode (("\\.tex$" . yatex-mode)
+         ("\\.sty$" . yatex-mode)
+         ("\\.ltx$" . yatex-mode))
+
   :config
   (setq ;;tex-command "LC_ALL='en_US.UTF-8' lualatex -synctex=1 -interaction=nonstopmode"
         ;;tex-command "pdflatex -interaction=nonstopmode"
@@ -86,7 +91,10 @@
 	     (t (+ 6 (length str)))
 	     )))
   )
+
 (use-package reftex
+  :ensure t
+  :defer t
   :config
   ;; skip "SELECT A REFERECE FORMAT" when typing 'C-c )'
   (setq reftex-ref-macro-prompt nil)
