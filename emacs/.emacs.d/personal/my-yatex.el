@@ -11,7 +11,10 @@
   :mode (("\\.tex$" . yatex-mode)
          ("\\.sty$" . yatex-mode)
          ("\\.ltx$" . yatex-mode))
-
+  ;;...I dont know why but this :bind does not work...
+  ;; :bind (("C-c c" . 'YaTeX-typeset-menu)
+  ;;        ("C-c s" . 'YaTeX-make-section)
+  ;;        ("C-c S" . 'YaTeX-make-section-region))
   :config
   (setq ;;tex-command "LC_ALL='en_US.UTF-8' lualatex -synctex=1 -interaction=nonstopmode"
         ;;tex-command "pdflatex -interaction=nonstopmode"
@@ -51,8 +54,10 @@
       ))
   ;; key bindings
   (add-hook 'yatex-mode-hook
-            '(lambda ()
-               (define-key YaTeX-mode-map (kbd "C-c c") 'YaTeX-typeset-menu)))
+            (lambda ()
+              (define-key YaTeX-mode-map (kbd "C-c c") 'YaTeX-typeset-menu)
+              (define-key prelude-mode-map (kbd "C-c s") nil) ;; disable minor-mode-map binding
+              (define-key YaTeX-mode-map (kbd "C-c s") 'YaTeX-make-section)))
   ;; outline-minor-mode
   (add-hook
    'yatex-mode-hook
