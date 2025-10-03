@@ -15,6 +15,8 @@
   ;; :bind (("C-c c" . 'YaTeX-typeset-menu)
   ;;        ("C-c s" . 'YaTeX-make-section)
   ;;        ("C-c S" . 'YaTeX-make-section-region))
+  :init
+  (setq YaTeX-inhibit-prefix-letter t) ;; this should be in :init not in :config
   :config
   (setq ;;tex-command "LC_ALL='en_US.UTF-8' lualatex -synctex=1 -interaction=nonstopmode"
         ;;tex-command "pdflatex -interaction=nonstopmode"
@@ -22,6 +24,7 @@
         dvi2-command "~/bin/tex-preview.sh"; or "~/bin/dvi2pdf"
         dviprint-command-format "/Library/Tex/texbin/dvips %s | lpr"
         YaTeX-kanji-code 4; (1 SJIS, 2 JIS, 3 EUC, 4 UTF-8)
+        YaTeX-latex-message-code 'utf-8
         YaTeX-use-AMS-LaTeX t; AMS-LaTeX
         section-name "documentclass"
         makeindex-command "/Library/Tex/texbin/mendex"
@@ -52,12 +55,15 @@
    '(lambda ()
       (set-face-foreground YaTeX-font-lock-formula-face "ForestGreen") ;; 数式の色
       ))
-  ;; key bindings
-  (add-hook 'yatex-mode-hook
-            (lambda ()
-              (define-key YaTeX-mode-map (kbd "C-c c") 'YaTeX-typeset-menu)
-              (define-key prelude-mode-map (kbd "C-c s") nil) ;; disable minor-mode-map binding
-              (define-key YaTeX-mode-map (kbd "C-c s") 'YaTeX-make-section)))
+  ;; ;; key bindings
+  ;; (add-hook 'yatex-mode-hook
+  ;;           (lambda ()
+  ;;             ;; disable prelude original keybindings that conflict with yatex
+  ;;             (define-key prelude-mode-map (kbd "C-c t") nil)
+  ;;             (define-key prelude-mode-map (kbd "C-c s") nil)
+  ;;             (define-key prelude-mode-map (kbd "C-c c") nil)
+  ;;             (define-key YaTeX-mode-map (kbd "C-c t") 'YaTeX-typeset-menu)
+  ;;             (define-key YaTeX-mode-map (kbd "C-c s") 'YaTeX-make-section)))
   ;; outline-minor-mode
   (add-hook
    'yatex-mode-hook
