@@ -24,7 +24,6 @@
         dvi2-command "~/bin/tex-preview.sh"; or "~/bin/dvi2pdf"
         dviprint-command-format "/Library/Tex/texbin/dvips %s | lpr"
         YaTeX-kanji-code 4; (1 SJIS, 2 JIS, 3 EUC, 4 UTF-8)
-        YaTeX-latex-message-code 'utf-8
         YaTeX-use-AMS-LaTeX t; AMS-LaTeX
         section-name "documentclass"
         makeindex-command "/Library/Tex/texbin/mendex"
