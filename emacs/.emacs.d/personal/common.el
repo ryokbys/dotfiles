@@ -80,9 +80,11 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 
-;; Disable automatic formatting on save
+;;=== Disable automatic formatting on save
 (setq prelude-format-on-save nil)
 
+;;=== Disable whitespace-mode
+(setq prelude-whitespace nil)
 
 ;; YaTeX
 ;;(load "my-yatex")
