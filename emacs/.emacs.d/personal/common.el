@@ -29,6 +29,9 @@
 
 (global-set-key [remap other-window] 'other-window)
 
+;; Option + Backspace が C-M-h と認識される場合の対策
+(global-set-key (kbd "C-M-h") 'backward-kill-word)
+
 ;; window move (shift + cursor)
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
