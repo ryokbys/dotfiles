@@ -73,6 +73,7 @@
       ("\\.yml$" . yaml-mode)
       ("\\.md$" . markdown-mode)
       ("\\.toml$" . conf-toml-mode)
+      ("\\.js$" . json-mode)
       )))
 
 (modify-coding-system-alist 'file "\\.rst\\'" 'utf-8)
@@ -91,3 +92,9 @@
 
 ;; YaTeX
 ;;(load "my-yatex")
+
+;; JSON mode
+(add-hook 'json-mode-hook (lambda ()
+                            (setq js-indent-level 2)
+                            (setq indent-tabs-mode nil) ; Ensures spaces are used instead of tabs
+                            ))
