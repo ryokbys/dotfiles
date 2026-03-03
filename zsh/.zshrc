@@ -78,6 +78,7 @@ ZSH_THEME="amuse"
 plugins=(
   git
   zsh-autosuggestions
+  virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -131,3 +132,5 @@ eval "$(anyenv init -)"
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+. "$HOME/.local/bin/env"

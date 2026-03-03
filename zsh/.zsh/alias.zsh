@@ -70,5 +70,6 @@ alias findnb='find . -name "*ipynb_check*" -prune -o -name "*.ipynb" | grep -v "
 alias gcc='gcc-15'
 alias g++='g++-15'
 alias c++='g++-15'
+alias tt='taskwarrior-tui'
 #alias python='python3'
 #alias pip='pip3'
