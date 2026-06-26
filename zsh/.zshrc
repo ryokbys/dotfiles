@@ -134,3 +134,31 @@ eval "$(anyenv init -)"
 eval "$(zoxide init zsh)"
 
 . "$HOME/.local/bin/env"
+
+
+# Added by Antigravity CLI installer
+# export PATH="/Users/kobayashi/.local/bin:$PATH:$(npm prefix --location=global)/bin"
+
+# Dropbox実パス → symlinkパスへ移動
+# 例: ~/Library/CloudStorage/Dropbox/work/current → ~/work/current
+cdl() {
+    local dropbox_real="$HOME/Library/CloudStorage/Dropbox"
+    local phys
+    phys=$(pwd -P)
+
+    if [[ "$phys" != "$dropbox_real"* ]]; then
+        echo "cdl: Dropbox配下ではありません ($phys)" >&2
+        return 1
+    fi
+
+    local rel="${phys#$dropbox_real/}"
+
+    if [[ -d "$HOME/$rel" ]]; then
+        cd "$HOME/$rel"        # ~/work/current など直接symlink
+    elif [[ -d "$HOME/Dropbox/$rel" ]]; then
+        cd "$HOME/Dropbox/$rel"  # ~/Dropbox/X へのフォールバック
+    else
+        echo "cdl: 対応するsymlinkが見つかりません: ~/$rel" >&2
+        return 1
+    fi
+}
