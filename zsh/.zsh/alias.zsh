@@ -1,4 +1,4 @@
-function set_projdir() {
+catfunction set_projdir() {
     d=$(pwd)
     current=${HOME}/work/current
     setopt BASH_REMATCH
@@ -75,3 +75,5 @@ alias c++='g++-15'
 alias tt='taskwarrior-tui'
 #alias python='python3'
 #alias pip='pip3'
+#alias glow='glow -p'
+
